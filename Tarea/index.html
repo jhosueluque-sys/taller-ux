@@ -1,27 +1,57 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis tareas</title>
+    <title>Mis tareas | Organizador personal</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Mis tareas</h1>
+    <main class="contenedor">
+        <header class="encabezado">
+            <p class="etiqueta">ORGANIZACIÓN PERSONAL</p>
+            <h1>Mis tareas<span>.</span></h1>
+            <p class="descripcion">
+                Organiza tu día, una tarea a la vez.
+            </p>
+        </header>
 
-    <input id="nuevaTarea" placeholder="Tarea">
-    <button id="agregar">+</button>
+        <section class="panel" aria-label="Lista de tareas">
+            <h2>Mi lista</h2>
 
-    <p id="mensaje"></p>
+            <div class="formulario">
+                <input
+                    id="nuevaTarea"
+                    type="text"
+                    placeholder="¿Qué necesitas hacer?"
+                    aria-label="Nueva tarea"
+                >
+                <button id="agregar" type="button">
+                    Agregar
+                </button>
+            </div>
 
-    <div>
-        <button data-filtro="todas">Todas</button>
-        <button data-filtro="pendientes">Pendientes</button>
-        <button data-filtro="completadas">Completadas</button>
-    </div>
+            <p id="mensaje" aria-live="polite"></p>
 
-    <ul id="listaTareas"></ul>
+            <nav class="filtros" aria-label="Filtrar tareas">
+                <button data-filtro="todas" class="activo">
+                    Todas
+                </button>
+                <button data-filtro="pendientes">
+                    Pendientes
+                </button>
+                <button data-filtro="completadas">
+                    Completadas
+                </button>
+            </nav>
+
+            <ul id="listaTareas"></ul>
+        </section>
+
+        <footer>
+            <p>Un paso a la vez. Sigue avanzando.</p>
+        </footer>
+    </main>
 
     <script src="app.js"></script>
 </body>
