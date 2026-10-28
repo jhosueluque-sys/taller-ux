@@ -1,0 +1,23 @@
+body {
+    background: #111;
+    color: #aaa;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+input {
+    width: 150px;
+    padding: 3px;
+}
+
+button {
+    background: #444;
+    color: #aaa;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}
+
+li {
+    margin: 5px;
+}
